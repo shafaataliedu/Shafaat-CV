@@ -47,12 +47,38 @@ a { color: var(--accent); }
   .id h1 { margin: 0; color: var(--ink); font-size: 32px; font-weight: 800; font-family: "Poppins", sans-serif; }
   .id .role { color: var(--accent); font-weight: 600; margin-top: 4px; font-family: "Poppins", sans-serif; }
   .quick-links { margin-top: 12px; display: flex; gap: 12px; }
-  .quick-links a { color: var(--accent); font-size: 20px; transition: color .2s; text-decoration: none; }
-  .quick-links a:hover { color: var(--accent-2); }
-  .skill-bars { display: flex; flex-direction: column; gap: 12px; }
-.skill-bar .label { font-weight: 600; margin-bottom: 4px; color: var(--ink); }
-.skill-bar .bar { height: 8px; background: var(--rule); border-radius: 4px; overflow: hidden; }
-.skill-bar .bar span { display: block; height: 100%; background: var(--accent); }
+.quick-links a { color: var(--accent); font-size: 20px; transition: color .2s; text-decoration: none; }
+.quick-links a:hover { color: var(--accent-2); }
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.skill-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.skill-bar .label {
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: var(--ink);
+}
+.skill-bar .bar {
+  width: 100%;
+  height: 10px;
+  background: var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.skill-bar .bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 8px;
+}
 .layout { display: flex; flex-direction: column; gap: 32px; padding: 0 32px 32px; }
 @media (min-width: 900px) { .layout { display: grid; grid-template-columns: 65% 35%; gap: 32px; } }
   .section { margin-bottom: 32px; background: var(--card); padding: 16px; border: 1px solid var(--rule); border-radius: 12px; transition: background .2s, box-shadow .2s; }
@@ -66,8 +92,31 @@ a { color: var(--accent); }
 .contact-list a:hover, .link-list a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .links a { overflow-wrap:anywhere; word-break:break-word; display:block; white-space:normal; }
 .links a.code { text-overflow:ellipsis; overflow:hidden; }
-.skills { margin: 8px 0 0 18px; padding: 0; }
-.skills li { margin: 6px 0; }
+.skills {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.skills li {
+  position: relative;
+  padding-left: 16px;
+  line-height: 1.4;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.skills li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
 .exp { border-left:2px solid var(--rule); padding-left:28px; }
 .exp-item { position:relative; margin:24px 0; line-height:1.45; break-inside:avoid; page-break-inside:avoid; }
 .exp-item::before{ content:""; position:absolute; left:-34px; top:6px; width:12px; height:12px; border-radius:50%; background:var(--card); border:2px solid var(--accent); }
@@ -93,6 +142,8 @@ a { color: var(--accent); }
   a { color: #000; text-decoration: none; }
   .exp { border-color: #000; }
   .exp-item::before { background: #fff; border:2px solid #000; }
+  .skill-bar .bar span { background: #000; }
+  .skills li::before { background: #000; }
   @page { size: A4; margin: 11mm; }
   h1, h2 { page-break-after: avoid; }
   .projects{ break-inside:avoid; }
