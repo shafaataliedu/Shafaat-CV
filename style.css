@@ -125,11 +125,14 @@ a { color: var(--accent); }
 .exp-item .meta{ color:var(--muted); font-size:14px; font-weight:500; text-align:right; }
 .exp-item ul { margin:8px 0 0 18px; }
 .exp-item li { margin:6px 0; }
-.edu { border-left:2px solid var(--rule); padding-left:18px; }
-.edu-item { position:relative; margin:14px 0; line-height:1.45; break-inside:avoid; page-break-inside:avoid; }
-.edu-item::before{ content:""; position:absolute; left:-9px; top:6px; width:10px; height:10px; border-radius:50%; background:var(--accent-2); }
-.edu-item h3 { margin:0 0 4px; color:var(--ink); font-size:16px; font-weight:600; }
-.edu-item .meta{ display:block; color:#64748b; margin-top:0; font-size:14px; }
+.edu { border-left:2px solid var(--rule); padding-left:28px; }
+.edu-item { position:relative; margin:24px 0; line-height:1.45; break-inside:avoid; page-break-inside:avoid; }
+.edu-item::before{ content:""; position:absolute; left:-34px; top:6px; width:12px; height:12px; border-radius:50%; background:var(--card); border:2px solid var(--accent); }
+.edu-header{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; }
+.edu-item h3 { margin:0; color:var(--ink); font-size:16px; font-weight:600; font-family:"Poppins", sans-serif; }
+.edu-item .institution{ color:var(--muted); font-size:14px; margin-top:2px; }
+.edu-item .date{ color:var(--muted); font-size:14px; font-weight:500; }
+.edu-item .note{ margin:6px 0 0; color:var(--muted); }
 .sidebar{ display:flex; flex-direction:column; }
 .projects{ margin-top:auto; }
 .projects ul{ margin:8px 0 0 18px; }
@@ -142,6 +145,9 @@ a { color: var(--accent); }
   a { color: #000; text-decoration: none; }
   .exp { border-color: #000; }
   .exp-item::before { background: #fff; border:2px solid #000; }
+  .edu { border-color: #000; }
+  .edu-item::before { background: #fff; border:2px solid #000; }
+  .edu-item .institution, .edu-item .date, .edu-item .note { color:#000; }
   .skill-bar .bar span { background: #000; }
   .skills li::before { background: #000; }
   @page { size: A4; margin: 11mm; }
