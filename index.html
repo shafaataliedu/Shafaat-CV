@@ -66,7 +66,10 @@
     }
     .id h1 { margin: 0; color: var(--ink); font-size: 32px; font-weight: 800; }
     .id .role { color: var(--accent); font-weight: 600; margin-top: 4px; }
-    .qr svg { width: 96px; height: 96px; }
+    .skill-bars { display: flex; flex-direction: column; gap: 12px; }
+    .skill-bar .label { font-weight: 600; margin-bottom: 4px; color: var(--ink); }
+    .skill-bar .bar { height: 8px; background: var(--rule); border-radius: 4px; overflow: hidden; }
+    .skill-bar .bar span { display: block; height: 100%; background: var(--accent); }
     .layout { display: flex; flex-direction: column; gap: 32px; padding: 0 32px 32px; }
     @media (min-width: 900px) { .layout { display: grid; grid-template-columns: 65% 35%; gap: 32px; } }
     .section { margin-bottom: 24px; }
@@ -91,7 +94,7 @@
     .footer { padding: 16px 32px; color: #94a3b8; font-size: 12px; }
     @media print {
       body { background: #fff; color: #000; font-size: 11pt; line-height: 1.4; font-family: system-ui, sans-serif; }
-      .toolbar, .header::before, .qr { display: none !important; }
+      .toolbar, .header::before { display: none !important; }
       .card { box-shadow: none; border-radius: 0; }
       a { color: #000; text-decoration: none; }
       .exp { border-color: #000; }
@@ -102,7 +105,7 @@
     }
     body.ats { --accent: #000; --accent-2: #000; --accent-3: #000; --bg: #fff; --card: #fff; --rule: #000; color: #000; font-family: system-ui, sans-serif; }
     body.ats .card { box-shadow: none; }
-    body.ats .header::before, body.ats .icon, body.ats .qr { display: none; }
+    body.ats .header::before, body.ats .icon { display: none; }
     body.ats .skills { display: block; }
     body.ats .skills li { background: none; border: none; box-shadow: none; padding: 2px 0; border-radius: 0; display: list-item; transform: none; }
     body.ats .contact-list a, body.ats .link-list a { color: #000; border-color: #000; }
@@ -120,7 +123,8 @@
       "https://www.youtube.com/@shafaataliedu",
       "https://www.pinterest.com/shafaataliedu",
       "https://linkedin.com/in/shafaataliedu",
-      "https://www.shafaataliedu.blog"
+      "https://www.shafaataliedu.blog",
+      "https://www.upwork.com/freelancers/~01ad976f823982348c"
     ]
   }
   </script>
@@ -138,11 +142,6 @@
           <h1>Shafaat Ali</h1>
           <div class="role">Sales Coordinator</div>
         </div>
-        <div class="qr" aria-hidden="true">
-          <a href="https://shafaataliedu.github.io/Shafaat-CV/" tabindex="-1">
-            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" width="120" height="120"><rect width="120" height="120" fill="#fff"/><path d="M0 0h24v24H0zM28 0h8v8h-8zM40 0h8v8h-8zM52 0h8v8h-8zM64 0h8v8h-8zM76 0h8v8h-8zM88 0h8v8h-8zM100 0h20v20h-8v8h8v8h-20zM0 28h8v8H0zM12 28h8v8h-8zM24 28h8v8h-8zM52 28h8v8h-8zM64 28h8v8h-8zM76 28h8v8h-8zM88 28h8v8h-8zM0 40h8v8H0zM12 40h8v8h-8zM24 40h8v8h-8zM52 40h8v8h-8zM64 40h8v8h-8zM76 40h8v8h-8zM88 40h8v8h-8zM0 52h24v24H0zM52 52h8v8h-8zM64 52h8v8h-8zM76 52h8v8h-8zM88 52h8v8h-8zM52 64h8v8h-8zM64 64h8v8h-8zM76 64h8v8h-8zM88 64h8v8h-8zM52 76h8v8h-8zM64 76h8v8h-8zM76 76h8v8h-8zM88 76h8v8h-8zM112 60h8v8h-8zM112 72h8v8h-8zM112 84h8v8h-8zM100 92h8v8h-8zM112 96h8v24h-24v-8h16v-8h-8v-8zM0 88h8v8H0zM12 88h8v8h-8zM24 88h8v8h-8zM36 88h8v8h-8zM48 88h8v8h-8zM60 88h8v8h-8zM72 88h8v8h-8zM84 88h8v8h-8zM96 108h8v8h-8zM108 108h8v8h-8zM0 100h24v20h-8v-12H8v12H0z" fill="#000"/></svg>
-          </a>
-        </div>
       </header>
       <div class="layout">
         <main id="main" role="main">
@@ -151,8 +150,10 @@
             <p>
               Detail‑oriented <strong>Sales Coordinator</strong> with studies in <strong>Software Engineering (UET Mardan, 2017–2021)</strong> and proven success in
               sales support, online marketing, and client communication. Experienced in managing sales pipelines, coordinating with global clients, and using
-              <strong>CRM tools (Apollo.io, HubSpot, Zoho)</strong>. Strong record of online ebook sales through <strong>Amazon, Etsy, Pinterest, and WhatsApp</strong>,
+              <strong>CRM tools (Apollo.io, HubSpot, Zoho)</strong>. Strong record of online ebook sales through <strong>Amazon, Etsy, Pinterest, and WhatsApp Business</strong>,
               plus content‑driven marketing on <strong>YouTube</strong>. Known for accurate reporting, timely follow‑ups, and smooth cross‑team coordination.
+              I keep up with the latest developments in technology and leverage new tools to streamline sales and marketing processes and boost revenue.
+              A lifelong learner, I quickly master new software, processes, and skills while bringing excellent communication and adaptability to every team.
             </p>
           </section>
 
@@ -173,7 +174,7 @@
                 <h3>Freelance Sales &amp; Digital Marketing Specialist</h3>
                 <div class="meta">2019 – Present</div>
                 <ul>
-                  <li>Coordinated ebook sales and promotions on <strong>Amazon, Etsy, Pinterest, and WhatsApp</strong>.</li>
+                  <li>Coordinated ebook sales and promotions on <strong>Amazon, Etsy, Pinterest, and WhatsApp Business</strong>.</li>
                   <li>Maintained lead pipelines, handled after‑sales communication, and prepared performance dashboards.</li>
                   <li>Delivered persuasive ad copy and optimized product listings to boost conversions.</li>
                   <li>Aligned sales and marketing strategies for global clients.</li>
@@ -196,6 +197,8 @@
             <p><strong>Studies toward BSc — Software Engineering</strong></p>
             <p>University of Engineering &amp; Technology (UET), Mardan · 2017 – 2021</p>
             <p class="muted">Coursework completed; degree not yet conferred.</p>
+            <p><strong>FSc Pre‑Engineering</strong></p>
+            <p>Islamia College Peshawar · 2015 – 2017 · 82% (A grade)</p>
           </section>
 
           <section class="section">
@@ -220,6 +223,7 @@
             <h2><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M10.59 13.41L9.17 12l5.83-5.83a2 2 0 0 1 2.83 2.83L12 14.83l-1.41-1.42z" fill="currentColor"/></svg>Links</h2>
             <ul class="link-list">
               <li><a href="https://linkedin.com/in/shafaataliedu" target="_blank" rel="noopener">linkedin.com/in/shafaataliedu</a></li>
+              <li><a href="https://www.upwork.com/freelancers/~01ad976f823982348c" target="_blank" rel="noopener">upwork.com/freelancers/~01ad976f823982348c</a></li>
               <li><a href="https://www.youtube.com/@shafaataliedu" target="_blank" rel="noopener">@shafaataliedu</a></li>
               <li><a href="https://www.pinterest.com/shafaataliedu" target="_blank" rel="noopener">pinterest.com/shafaataliedu</a></li>
               <li><a href="https://www.shafaataliedu.blog" target="_blank" rel="noopener">shafaataliedu.blog</a></li>
@@ -230,13 +234,34 @@
             <ul class="skills">
               <li>Sales Coordination &amp; Client Management</li>
               <li>CRM (Apollo.io, HubSpot, Zoho CRM)</li>
-              <li>Online Sales: Amazon, Etsy, Pinterest, WhatsApp</li>
+              <li>Online Sales: Amazon, Etsy, Pinterest, WhatsApp Business</li>
               <li>YouTube Marketing &amp; Video Content</li>
               <li>SEO Copywriting &amp; Digital Marketing</li>
               <li>Report Preparation &amp; Sales Tracking</li>
               <li>Cross‑Team Collaboration &amp; Communication</li>
               <li>Time Management &amp; Organization</li>
             </ul>
+          </section>
+          <section class="section">
+            <h2><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 20h4V10H5v10zm6 0h4V4h-4v16zm6 0h4v-6h-4v6z" fill="currentColor"/></svg>Skill Proficiency</h2>
+            <div class="skill-bars">
+              <div class="skill-bar">
+                <div class="label">Sales Coordination</div>
+                <div class="bar"><span style="width:90%"></span></div>
+              </div>
+              <div class="skill-bar">
+                <div class="label">Digital Marketing</div>
+                <div class="bar"><span style="width:85%"></span></div>
+              </div>
+              <div class="skill-bar">
+                <div class="label">Communication</div>
+                <div class="bar"><span style="width:95%"></span></div>
+              </div>
+              <div class="skill-bar">
+                <div class="label">Adaptability &amp; Quick Learning</div>
+                <div class="bar"><span style="width:92%"></span></div>
+              </div>
+            </div>
           </section>
         </aside>
       </div>
