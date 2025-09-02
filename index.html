@@ -17,7 +17,8 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' ry='20' fill='%232563eb'/%3E%3Ctext x='50' y='65' font-size='60' text-anchor='middle' fill='white'%3ESA%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
       --ink: #0f172a;
@@ -32,7 +33,7 @@
     html, body { height: 100%; }
     body {
       margin: 0; background: var(--bg); color: var(--muted);
-      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-family: "Roboto", system-ui, -apple-system, Segoe UI, sans-serif;
       font-size: 15px; line-height: 1.5;
       -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
     }
@@ -64,17 +65,22 @@
       background: linear-gradient(135deg, var(--accent), var(--accent-2)); opacity: .15;
       pointer-events: none;
     }
-    .id h1 { margin: 0; color: var(--ink); font-size: 32px; font-weight: 800; }
-    .id .role { color: var(--accent); font-weight: 600; margin-top: 4px; }
-    .skill-bars { display: flex; flex-direction: column; gap: 12px; }
+      .id h1 { margin: 0; color: var(--ink); font-size: 32px; font-weight: 800; font-family: "Poppins", sans-serif; }
+      .id .role { color: var(--accent); font-weight: 600; margin-top: 4px; font-family: "Poppins", sans-serif; }
+      .quick-links { margin-top: 12px; display: flex; gap: 12px; }
+      .quick-links a { color: var(--accent); font-size: 20px; transition: color .2s; text-decoration: none; }
+      .quick-links a:hover { color: var(--accent-2); }
+      .skill-bars { display: flex; flex-direction: column; gap: 12px; }
     .skill-bar .label { font-weight: 600; margin-bottom: 4px; color: var(--ink); }
     .skill-bar .bar { height: 8px; background: var(--rule); border-radius: 4px; overflow: hidden; }
     .skill-bar .bar span { display: block; height: 100%; background: var(--accent); }
     .layout { display: flex; flex-direction: column; gap: 32px; padding: 0 32px 32px; }
     @media (min-width: 900px) { .layout { display: grid; grid-template-columns: 65% 35%; gap: 32px; } }
-    .section { margin-bottom: 24px; }
-    .section h2 { display: flex; align-items: center; gap: 8px; color: var(--ink); font-size: 18px; margin: 0 0 12px; }
-    .section h2 .icon { width: 20px; height: 20px; color: var(--accent); }
+      .section { margin-bottom: 32px; background: var(--card); padding: 16px; border: 1px solid var(--rule); border-radius: 12px; transition: background .2s, box-shadow .2s; }
+      .section:nth-of-type(even) { background: #f1f5f9; }
+      .section:hover { box-shadow: 0 4px 12px rgba(15,23,42,.08); }
+      .section h2 { display: flex; align-items: center; gap: 8px; color: var(--ink); font-size: 21px; margin: 0 0 12px; font-family: "Poppins", sans-serif; letter-spacing: .5px; border-bottom: 2px solid var(--accent); padding-bottom: 4px; }
+      .section h2 .icon { font-size: 20px; color: var(--accent); }
     .contact-list, .link-list { list-style: none; margin: 0; padding: 0; }
     .contact-list li, .link-list li { margin: 4px 0; }
     .contact-list a, .link-list a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; }
@@ -84,11 +90,12 @@
       border: 1px solid rgba(255,255,255,.6); box-shadow: inset 0 0 0 1px rgba(0,0,0,.05); font-weight: 600; transition: transform .15s ease; }
     .skills li:hover { transform: scale(1.05); }
     @media (prefers-reduced-motion: reduce) { .skills li:hover { transform: none; } }
-    .exp { position: relative; border-left: 2px solid var(--rule); margin-left: 8px; padding-left: 24px; display: flex; flex-direction: column; gap: 24px; }
-    .exp-item { position: relative; }
-    .exp-item::before { content: ""; position: absolute; left: -33px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 3px solid var(--card); }
-    .exp-item h3 { margin: 0; color: var(--ink); font-size: 16px; }
-    .exp-item .meta { font-size: 13px; color: var(--muted); margin-top: 4px; }
+      .exp { position: relative; border-left: 2px solid var(--rule); margin-left: 120px; padding-left: 24px; display: flex; flex-direction: column; gap: 24px; }
+      .exp-item { position: relative; }
+      .exp-item::before { content: ""; position: absolute; left: -33px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 3px solid var(--card); }
+      .exp-item h3 { margin: 0; color: var(--ink); font-size: 16px; }
+      .exp-item .meta { position: absolute; left: -120px; top: 0; width: 100px; text-align: right; font-size: 13px; color: var(--muted); }
+      @media (max-width: 600px) { .exp { margin-left: 8px; } .exp-item .meta { position: static; width: auto; text-align: left; margin-top: 4px; } }
     .exp-item ul { margin: 8px 0 0 18px; }
     .exp-item li { margin: 6px 0; }
     .footer { padding: 16px 32px; color: #94a3b8; font-size: 12px; }
@@ -132,7 +139,7 @@
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
   <div class="toolbar" role="navigation">
-    <button class="print" aria-label="Print or save as PDF" onclick="window.print()">Print / Save as PDF</button>
+    <button class="print" aria-label="Download as PDF" onclick="window.print()">Download PDF</button>
     <button id="ats" aria-label="Toggle applicant tracking system friendly mode">ATS Mode</button>
   </div>
   <div class="wrap">
@@ -141,12 +148,17 @@
         <div class="id">
           <h1>Shafaat Ali</h1>
           <div class="role">Sales Coordinator</div>
+          <div class="quick-links">
+            <a href="https://linkedin.com/in/shafaataliedu" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/shafaataliedu" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@shafaataliedu" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
       </header>
       <div class="layout">
         <main id="main" role="main">
           <section class="section">
-            <h2><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/></svg>Professional Summary</h2>
+            <h2><i class="icon fa-solid fa-user"></i>Professional Summary</h2>
             <p>
               Detail‑oriented <strong>Sales Coordinator</strong> with studies in <strong>Software Engineering (UET Mardan, 2017–2021)</strong> and proven success in
               sales support, online marketing, and client communication. Experienced in managing sales pipelines, coordinating with global clients, and using
@@ -158,7 +170,7 @@
           </section>
 
           <section class="section">
-            <h2><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 2h9a2 2 0 0 1 2 2v3h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 5v11h12V9H6zm2-3v1h5V4H8z" fill="currentColor"/></svg>Professional Experience</h2>
+            <h2><i class="icon fa-solid fa-briefcase"></i>Professional Experience</h2>
             <div class="exp">
               <div class="exp-item">
                 <h3>Founder &amp; Sales/Marketing Manager — Shafaat Ali Education (@shafaataliedu)</h3>
@@ -193,7 +205,7 @@
           </section>
 
           <section class="section">
-            <h2><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 5-3.33 9.74-8 11-4.67-1.26-8-6-8-11V7l8-4z" fill="currentColor"/></svg>Education</h2>
+            <h2><i class="icon fa-solid fa-graduation-cap"></i>Education</h2>
             <p><strong>Studies toward BSc — Software Engineering</strong></p>
             <p>University of Engineering &amp; Technology (UET), Mardan · 2017 – 2021</p>
             <p class="muted">Coursework completed; degree not yet conferred.</p>
@@ -202,7 +214,7 @@
           </section>
 
           <section class="section">
-            <h2><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>Accomplishments</h2>
+            <h2><i class="icon fa-solid fa-trophy"></i>Accomplishments</h2>
             <ul>
               <li>Increased client sales by <strong>up to 150%</strong> through persuasive ad copywriting.</li>
               <li>Successfully managed online sales funnels across multiple platforms.</li>
@@ -212,7 +224,7 @@
         </main>
         <aside class="sidebar" role="complementary">
           <section class="section">
-            <h2><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm2 0v14h14V5H5zm3 3h8v2H8V8zm0 4h8v2H8v-2z" fill="currentColor"/></svg>Contact</h2>
+            <h2><i class="icon fa-solid fa-envelope"></i>Contact</h2>
             <ul class="contact-list">
               <li>Peshawar, Pakistan</li>
               <li><a href="tel:+923469089446">+92 346 9089446</a></li>
@@ -220,7 +232,7 @@
             </ul>
           </section>
           <section class="section">
-            <h2><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M10.59 13.41L9.17 12l5.83-5.83a2 2 0 0 1 2.83 2.83L12 14.83l-1.41-1.42z" fill="currentColor"/></svg>Links</h2>
+            <h2><i class="icon fa-solid fa-link"></i>Links</h2>
             <ul class="link-list">
               <li><a href="https://linkedin.com/in/shafaataliedu" target="_blank" rel="noopener">linkedin.com/in/shafaataliedu</a></li>
               <li><a href="https://www.upwork.com/freelancers/~01ad976f823982348c" target="_blank" rel="noopener">upwork.com/freelancers/~01ad976f823982348c</a></li>
@@ -230,7 +242,7 @@
             </ul>
           </section>
           <section class="section">
-            <h2><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h16v2H4zm2 4h12v2H6zm-2 4h16v2H4zm2 4h12v2H6zm-2 4h16v2H4z" fill="currentColor"/></svg>Core Skills</h2>
+            <h2><i class="icon fa-solid fa-lightbulb"></i>Core Skills</h2>
             <ul class="skills">
               <li>Sales Coordination &amp; Client Management</li>
               <li>CRM (Apollo.io, HubSpot, Zoho CRM)</li>
@@ -243,7 +255,7 @@
             </ul>
           </section>
           <section class="section">
-            <h2><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 20h4V10H5v10zm6 0h4V4h-4v16zm6 0h4v-6h-4v6z" fill="currentColor"/></svg>Skill Proficiency</h2>
+            <h2><i class="icon fa-solid fa-chart-bar"></i>Skill Proficiency</h2>
             <div class="skill-bars">
               <div class="skill-bar">
                 <div class="label">Sales Coordination</div>
