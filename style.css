@@ -68,11 +68,12 @@ a { color: var(--accent); }
 .links a.code { text-overflow:ellipsis; overflow:hidden; }
 .skills { margin: 8px 0 0 18px; padding: 0; }
 .skills li { margin: 6px 0; }
-.exp { border-left:2px solid var(--rule); padding-left:18px; }
-.exp-item { position:relative; margin:14px 0; line-height:1.45; break-inside:avoid; page-break-inside:avoid; }
-.exp-item::before{ content:""; position:absolute; left:-9px; top:6px; width:10px; height:10px; border-radius:50%; background:var(--accent); }
-.exp-item h3 { margin:0 0 4px; color:var(--ink); font-size:17px; font-weight:600; }
-.exp-item .meta{ display:block; color:var(--accent); margin-top:0; margin-left:0; font-size:14px; }
+.exp { border-left:2px solid var(--rule); padding-left:28px; }
+.exp-item { position:relative; margin:24px 0; line-height:1.45; break-inside:avoid; page-break-inside:avoid; }
+.exp-item::before{ content:""; position:absolute; left:-34px; top:6px; width:12px; height:12px; border-radius:50%; background:var(--card); border:2px solid var(--accent); }
+.exp-header{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; }
+.exp-item h3 { margin:0; color:var(--ink); font-size:17px; font-weight:600; font-family:"Poppins", sans-serif; }
+.exp-item .meta{ color:var(--muted); font-size:14px; font-weight:500; text-align:right; }
 .exp-item ul { margin:8px 0 0 18px; }
 .exp-item li { margin:6px 0; }
 .edu { border-left:2px solid var(--rule); padding-left:18px; }
@@ -91,7 +92,7 @@ a { color: var(--accent); }
   .card { box-shadow: none; border-radius: 0; }
   a { color: #000; text-decoration: none; }
   .exp { border-color: #000; }
-  .exp-item::before { background: #000; border-color: #fff; }
+  .exp-item::before { background: #fff; border:2px solid #000; }
   @page { size: A4; margin: 11mm; }
   h1, h2 { page-break-after: avoid; }
   .projects{ break-inside:avoid; }
@@ -103,4 +104,4 @@ body.ats .skills { display: block; }
 body.ats .skills li { background: none; border: none; box-shadow: none; padding: 2px 0; border-radius: 0; display: list-item; transform: none; }
 body.ats .contact-list a, body.ats .link-list a { color: #000; border-color: #000; }
 body.ats .exp { border-color: #000; }
-body.ats .exp-item::before { background: #000; border-color: #fff; }
+body.ats .exp-item::before { background: #fff; border:2px solid #000; }
