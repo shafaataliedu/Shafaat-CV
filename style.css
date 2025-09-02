@@ -6,15 +6,16 @@
   --accent-2: #14b8a6;
   --accent-3: #f59e0b;
   --bg: #f8fafc;
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   --card: #ffffff;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html, body { height: 100%; }
 html { scroll-behavior: smooth; }
 body {
-  margin: 0; background: var(--bg); color: var(--muted);
+  margin: 0; background: var(--bg-gradient, var(--bg)); color: var(--muted);
   font-family: "Roboto", system-ui, -apple-system, Segoe UI, sans-serif;
-  font-size: 15px; line-height: 1.5;
+  font-size: 16px; line-height: 1.6;
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
 a { color: var(--accent); }
@@ -35,7 +36,7 @@ a { color: var(--accent); }
 .toolbar button.download { background: var(--accent); color: #fff; border-color: var(--accent); }
 .toolbar button:hover { transform: scale(1.03); }
 @media (prefers-reduced-motion: reduce) { .toolbar button:hover { transform: none; } }
-.wrap { max-width: 960px; margin: 32px auto; padding: 0 16px; }
+.wrap { max-width: 1024px; margin: 32px auto; padding: 0 16px; }
 .card { background: var(--card); border-radius: 16px; box-shadow: 0 4px 20px rgba(15,23,42,.08); overflow: hidden; box-sizing: border-box; }
 .header {
   position: relative;
@@ -51,13 +52,13 @@ a { color: var(--accent); }
   pointer-events: none;
 }
   .id { text-align: center; }
-  .id h1 { margin: 0; color: var(--ink); font-size: 32px; font-weight: 800; font-family: "Poppins", sans-serif; position: relative; display: inline-block; padding-bottom: 8px; }
+  .id h1 { margin: 0; color: var(--ink); font-size: clamp(32px, 5vw, 40px); font-weight: 800; font-family: "Poppins", sans-serif; position: relative; display: inline-block; padding-bottom: 8px; }
   .id h1::after { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 60%; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: 2px; }
   .id .role { color: var(--accent); font-weight: 600; margin-top: 4px; font-family: "Poppins", sans-serif; }
   .id .role-secondary { color: var(--accent-2); font-weight: 600; margin-top: 2px; font-family: "Poppins", sans-serif; }
-  .id .tagline { margin-top: 12px; font-size: 15px; font-weight: 500; color: var(--muted); }
+  .id .tagline { margin-top: 12px; font-size: 16px; font-weight: 500; color: var(--muted); }
   .quick-links { margin-top: 12px; display: flex; gap: 12px; justify-content: center; }
-.quick-links a { color: var(--accent); font-size: 20px; transition: color .2s; text-decoration: none; }
+.quick-links a { color: var(--accent); font-size: 24px; transition: color .2s; text-decoration: none; }
 .quick-links a:hover { color: var(--accent-2); }
 .skill-bars {
   display: flex;
@@ -205,7 +206,7 @@ a { color: var(--accent); }
 }
 .sidebar{ display:flex; flex-direction:column; }
 .projects{ margin-top:auto; }
-.footer { padding: 16px 32px; color: #94a3b8; font-size: 12px; }
+.footer { padding: 16px 32px; color: #94a3b8; font-size: 12px; text-align: center; }
 body.ats { --accent: #000; --accent-2: #000; --accent-3: #000; --bg: #fff; --card: #fff; --rule: #000; color: #000; font-family: system-ui, sans-serif; }
 body.ats .card { box-shadow: none; }
 body.ats .header::before, body.ats .icon { display: none; }
