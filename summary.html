@@ -16,7 +16,7 @@
     *{box-sizing:border-box}
     html,body{height:100%}
     body{margin:0;background:var(--bg);color:var(--muted);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-    .wrap{max-width:980px;margin:28px auto;padding:0 16px}
+    .wrap{max-width:780px;margin:28px auto;padding:0 16px}
     header.cv{background:linear-gradient(135deg,#eaf2ff, #e6fff7);border:1px solid var(--rule);border-radius:18px;padding:20px 22px 18px;box-shadow:0 8px 30px rgba(15,23,42,.08)}
     .top{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px}
     .name{font-weight:800;color:var(--ink);font-size:32px;letter-spacing:.2px;margin:0}
@@ -61,6 +61,7 @@
     /* PRINT: one page A4 condensed */
     @page{size:A4;margin:10mm}
     @media print{
+      html,body{height:auto}
       body{background:#fff}
       header.cv{box-shadow:none}
       .links a{border:0;background:transparent;padding:0}
@@ -95,7 +96,7 @@
         <div class="card">
           <h2>Profile</h2>
           <div class="rule"></div>
-          <p class="summary">Detail‑oriented <b>Sales Coordinator</b> with studies toward BSc in Software Engineering (UET Mardan, 2017–2021). Experienced in sales support, online sales (Amazon, Etsy, Pinterest, WhatsApp), and <b>CRM tools</b> (Apollo.io, HubSpot, Zoho). Create performance reports, streamline follow‑ups, and market via <b>YouTube</b>. </p>
+          <p class="summary">Detail‑oriented <b>Sales Coordinator</b> with BSc studies in Software Engineering. Skilled in online sales (Amazon, Etsy, Pinterest, WhatsApp) and <b>CRM tools</b> (Apollo.io, HubSpot, Zoho). Build dashboards, streamline follow‑ups, and market via <b>YouTube</b>.</p>
           <div class="kpis">
             <div class="kpi"><b>1,000+ </b><small>ebooks published/sold</small></div>
             <div class="kpi"><b>4,000+ </b><small>YouTube Shorts</small></div>
@@ -112,8 +113,6 @@
             <div class="chip">Lead Tracking</div>
             <div class="chip">YouTube Marketing</div>
             <div class="chip">Amazon/Etsy/Pinterest</div>
-            <div class="chip">Reporting &amp; Dashboards</div>
-            <div class="chip">SEO Copywriting</div>
           </div>
           <div class="rule" style="margin-top:10px"></div>
           <div class="bars" aria-label="Skill proficiency">
@@ -133,26 +132,24 @@
           <div class="ttl">Founder &amp; Sales/Marketing Manager — @shafaataliedu</div>
           <div class="meta">Jan 2024 – Present · Remote</div>
           <ul>
-            <li>Coordinated online sales, content schedules, and weekly reports across channels.</li>
-            <li>Managed Pinterest/SEO campaigns and <b>CRM</b> pipelines to drive conversions.</li>
-            <li>Built brand reach with <b>4,000+ Shorts</b> and <b>1,000+ ebooks</b>.</li>
+            <li>Ran online sales & content schedules; handled CRM pipelines and reports.</li>
+            <li>Expanded brand via Pinterest/SEO, 4,000+ Shorts & 1,000+ ebooks.</li>
           </ul>
         </div>
         <div class="item">
           <div class="ttl">Freelance Sales &amp; Digital Marketing Specialist</div>
           <div class="meta">2019 – Present</div>
           <ul>
-            <li>Ran Amazon/Etsy/Pinterest/WhatsApp funnels; optimized listings and follow‑ups.</li>
-            <li>Prepared performance dashboards; maintained CRM hygiene and client records.</li>
-            <li>Delivered persuasive ad copy; boosted sales by <b>up to 150%</b>.</li>
+            <li>Managed Amazon/Etsy/Pinterest/WhatsApp funnels; optimized listings & follow-ups.</li>
+            <li>Built dashboards, kept client records, and drove <b>150%+</b> sales gains.</li>
           </ul>
         </div>
         <div class="item">
           <div class="ttl">Content Writer &amp; Virtual Assistant — Blueprint Digital</div>
           <div class="meta">Feb 2022 – Sep 2022</div>
           <ul>
-            <li>Handled client communication, scheduling, and project coordination.</li>
-            <li>Produced SEO content and supported sales documentation.</li>
+            <li>Handled client communication, scheduling & coordination.</li>
+            <li>Created SEO content and sales documentation.</li>
           </ul>
         </div>
       </section>
@@ -169,8 +166,7 @@
         <ul>
           <li>Communication &amp; Client Handling</li>
           <li>Time Management &amp; Organization</li>
-          <li>Team Collaboration</li>
-          <li>Adaptability &amp; Quick Learning</li>
+          <li>Team Collaboration &amp; Adaptability</li>
         </ul>
         <div class="rule"></div>
         <h2 style="margin-top:6px">Links</h2>
@@ -179,7 +175,6 @@
           <li><a href="https://www.youtube.com/@shafaataliedu" target="_blank" rel="noopener">youtube.com/@shafaataliedu</a></li>
           <li><a href="https://www.pinterest.com/shafaataliedu" target="_blank" rel="noopener">pinterest.com/shafaataliedu</a></li>
           <li><a href="https://www.upwork.com/freelancers/~01ad976f823982348c" target="_blank" rel="noopener">Upwork profile</a></li>
-          <li><a href="https://www.shafaataliedu.blog/" target="_blank" rel="noopener">shafaataliedu.blog</a></li>
         </ul>
       </aside>
     </div>
