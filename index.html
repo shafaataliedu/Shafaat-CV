@@ -43,6 +43,7 @@
   <div class="toolbar" role="navigation">
     <button class="download" id="download" aria-label="Download PDF">Download PDF</button>
     <button class="download" id="download-summary" aria-label="Download one-page summary PDF">Download 1-Page PDF</button>
+    <button class="download" id="open-summary" aria-label="Open one-page summary">One-Page CV</button>
     <button id="ats" aria-label="Toggle applicant tracking system friendly mode">ATS Mode</button>
   </div>
   <div class="wrap" id="full">
@@ -319,6 +320,9 @@
             pagebreak:{mode:['avoid-all','css','legacy']}
           }).from(summary).save().then(()=>{summaryWrap.hidden=true;full.hidden=false;});
         },100);
+      });
+      document.getElementById('open-summary').addEventListener('click',function(){
+        window.location.href='summary.html';
       });
     });
   </script>
