@@ -147,6 +147,11 @@ a { color: var(--accent); }
 .contact-list a, .link-list a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; }
 .contact-list a:hover, .link-list a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .link-list li a { font-size: 14px; }
+.contact-list .icons,
+.link-list .icons { margin-right: 6px; color: var(--accent); }
+.id .contact-list { margin-top: 12px; }
+.id .contact-list li { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 2px 0; }
+.link-list li { display: flex; align-items: center; }
 .links a { overflow-wrap:anywhere; word-break:break-word; display:block; white-space:normal; }
 .links a.code { text-overflow:ellipsis; overflow:hidden; }
 .skills {
