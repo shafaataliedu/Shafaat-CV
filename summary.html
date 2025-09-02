@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shafaat Ali — One‑Page CV</title>
+  <meta name="description" content="Condensed one‑page CV for Shafaat Ali — Sales Coordinator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#0f172a; --muted:#334155; --rule:#e2e8f0;
+      --bg:#f8fafc; --card:#ffffff; --accent:#2563eb; --accent2:#14b8a6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--muted);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:980px;margin:28px auto;padding:0 16px}
+    header.cv{background:linear-gradient(135deg,#eaf2ff, #e6fff7);border:1px solid var(--rule);border-radius:18px;padding:20px 22px 18px;box-shadow:0 8px 30px rgba(15,23,42,.08)}
+    .top{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px}
+    .name{font-weight:800;color:var(--ink);font-size:32px;letter-spacing:.2px;margin:0}
+    .role{font-weight:800;color:var(--accent);font-size:15px}
+    .tag{font-weight:800;color:var(--accent2)}
+    .links{margin-left:auto;display:flex;flex-wrap:wrap;gap:10px}
+    .links a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:#fff;border:1px solid var(--rule);border-radius:999px;padding:6px 10px;font-weight:600;color:var(--muted)}
+    .links a:hover{border-color:var(--accent);color:var(--ink)}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:16px}
+    .card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:16px;box-shadow:0 6px 20px rgba(15,23,42,.06)}
+    h2{margin:0 0 10px;color:var(--ink);font-size:15px;letter-spacing:.2px}
+    .rule{height:2px;background:linear-gradient(90deg,var(--accent),transparent);margin:6px 0 10px}
+    .summary{font-size:14px;line-height:1.6}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+    .kpi{background:#f1f5f9;border:1px solid var(--rule);border-radius:12px;padding:10px;text-align:center}
+    .kpi b{display:block;color:var(--ink);font-size:15px}
+
+    .cols{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:16px}
+
+    .exp .item{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:10px 0;border-bottom:1px dashed var(--rule)}
+    .exp .item:last-child{border-bottom:0}
+    .exp .ttl{font-weight:700;color:var(--ink)}
+    .exp .meta{font-size:12px;color:#64748b}
+    .exp ul{grid-column:1/-1;margin:6px 0 0 18px}
+    .exp li{margin:3px 0}
+
+    .skills{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .chip{background:#eef2ff;border:1px solid #dbeafe;border-radius:10px;padding:6px 10px;font-weight:600;font-size:13px;color:#1e3a8a}
+    .bars .bar{display:grid;grid-template-columns:120px 1fr;align-items:center;gap:10px}
+    .bars .track{height:7px;border-radius:999px;background:#e5e7eb;position:relative}
+    .bars .fill{position:absolute;inset:0;width:var(--w);background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:999px}
+
+    .list ul{margin:0 0 0 18px}
+    .list li{margin:4px 0}
+
+    footer{display:flex;gap:10px;justify-content:space-between;margin-top:14px}
+    .note{font-size:12px;color:#64748b}
+    .actions{display:flex;gap:8px}
+    .btn{border:1px solid var(--rule);background:#fff;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer}
+    .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+    /* PRINT: one page A4 condensed */
+    @page{size:A4;margin:10mm}
+    @media print{
+      body{background:#fff}
+      header.cv{box-shadow:none}
+      .links a{border:0;background:transparent;padding:0}
+      .grid,.cols{grid-template-columns:1fr;gap:10px}
+      .kpis{grid-template-columns:repeat(3,1fr)}
+      .card{box-shadow:none}
+      .actions{display:none}
+      .chip{background:#f8fafc}
+      .exp .item{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="cv">
+      <div class="top">
+        <div>
+          <h1 class="name">Shafaat Ali</h1>
+          <div class="role">Sales Coordinator <span class="tag">| Digital Marketing &amp; Sales Support</span></div>
+        </div>
+        <div class="links">
+          <a href="mailto:shafaataliedu@gmail.com">Email</a>
+          <a href="tel:+923469089446">Phone</a>
+          <a href="https://linkedin.com/in/shafaataliedu" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/shafaataliedu" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.youtube.com/@shafaataliedu" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.pinterest.com/shafaataliedu" target="_blank" rel="noopener">Pinterest</a>
+          <a href="https://www.upwork.com/freelancers/~01ad976f823982348c" target="_blank" rel="noopener">Upwork</a>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h2>Profile</h2>
+          <div class="rule"></div>
+          <p class="summary">Detail‑oriented <b>Sales Coordinator</b> with studies toward BSc in Software Engineering (UET Mardan, 2017–2021). Experienced in sales support, online sales (Amazon, Etsy, Pinterest, WhatsApp), and <b>CRM tools</b> (Apollo.io, HubSpot, Zoho). Create performance reports, streamline follow‑ups, and market via <b>YouTube</b>. </p>
+          <div class="kpis">
+            <div class="kpi"><b>1,000+ </b><small>ebooks published/sold</small></div>
+            <div class="kpi"><b>4,000+ </b><small>YouTube Shorts</small></div>
+            <div class="kpi"><b>150%+</b><small> sales lift via copy</small></div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Skills Snapshot</h2>
+          <div class="rule"></div>
+          <div class="skills">
+            <div class="chip">Sales Coordination</div>
+            <div class="chip">Client Management</div>
+            <div class="chip">CRM (Apollo/HubSpot/Zoho)</div>
+            <div class="chip">Lead Tracking</div>
+            <div class="chip">YouTube Marketing</div>
+            <div class="chip">Amazon/Etsy/Pinterest</div>
+            <div class="chip">Reporting &amp; Dashboards</div>
+            <div class="chip">SEO Copywriting</div>
+          </div>
+          <div class="rule" style="margin-top:10px"></div>
+          <div class="bars" aria-label="Skill proficiency">
+            <div class="bar"><strong>Sales Ops</strong><div class="track"><span class="fill" style="--w:88%"></span></div></div>
+            <div class="bar"><strong>Digital Marketing</strong><div class="track"><span class="fill" style="--w:80%"></span></div></div>
+            <div class="bar"><strong>Communication</strong><div class="track"><span class="fill" style="--w:92%"></span></div></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="cols">
+      <section class="card exp">
+        <h2>Experience</h2>
+        <div class="rule"></div>
+        <div class="item">
+          <div class="ttl">Founder &amp; Sales/Marketing Manager — @shafaataliedu</div>
+          <div class="meta">Jan 2024 – Present · Remote</div>
+          <ul>
+            <li>Coordinated online sales, content schedules, and weekly reports across channels.</li>
+            <li>Managed Pinterest/SEO campaigns and <b>CRM</b> pipelines to drive conversions.</li>
+            <li>Built brand reach with <b>4,000+ Shorts</b> and <b>1,000+ ebooks</b>.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="ttl">Freelance Sales &amp; Digital Marketing Specialist</div>
+          <div class="meta">2019 – Present</div>
+          <ul>
+            <li>Ran Amazon/Etsy/Pinterest/WhatsApp funnels; optimized listings and follow‑ups.</li>
+            <li>Prepared performance dashboards; maintained CRM hygiene and client records.</li>
+            <li>Delivered persuasive ad copy; boosted sales by <b>up to 150%</b>.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="ttl">Content Writer &amp; Virtual Assistant — Blueprint Digital</div>
+          <div class="meta">Feb 2022 – Sep 2022</div>
+          <ul>
+            <li>Handled client communication, scheduling, and project coordination.</li>
+            <li>Produced SEO content and supported sales documentation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="card list">
+        <h2>Education &amp; Extras</h2>
+        <div class="rule"></div>
+        <ul style="margin-bottom:8px">
+          <li><b>Studies toward BSc — Software Engineering</b> · UET Mardan (2017–2021)<br><small>Coursework completed; degree not yet conferred.</small></li>
+          <li><b>FSc Pre‑Engineering</b> · Islamia College Peshawar (2015–2017) · 82% (A)</li>
+        </ul>
+        <div class="rule"></div>
+        <h2 style="margin-top:6px">Soft Skills</h2>
+        <ul>
+          <li>Communication &amp; Client Handling</li>
+          <li>Time Management &amp; Organization</li>
+          <li>Team Collaboration</li>
+          <li>Adaptability &amp; Quick Learning</li>
+        </ul>
+        <div class="rule"></div>
+        <h2 style="margin-top:6px">Links</h2>
+        <ul>
+          <li><a href="https://linkedin.com/in/shafaataliedu" target="_blank" rel="noopener">linkedin.com/in/shafaataliedu</a></li>
+          <li><a href="https://www.youtube.com/@shafaataliedu" target="_blank" rel="noopener">youtube.com/@shafaataliedu</a></li>
+          <li><a href="https://www.pinterest.com/shafaataliedu" target="_blank" rel="noopener">pinterest.com/shafaataliedu</a></li>
+          <li><a href="https://www.upwork.com/freelancers/~01ad976f823982348c" target="_blank" rel="noopener">Upwork profile</a></li>
+          <li><a href="https://www.shafaataliedu.blog/" target="_blank" rel="noopener">shafaataliedu.blog</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="note">Peshawar, Pakistan • <a href="mailto:shafaataliedu@gmail.com">shafaataliedu@gmail.com</a> • <a href="tel:+923469089446">+92 346 9089446</a></div>
+      <div class="actions">
+        <button class="btn" onclick="document.body.classList.toggle('ats')">ATS Mode</button>
+        <button class="btn primary" onclick="window.print()">Save as PDF</button>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
