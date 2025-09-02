@@ -40,7 +40,7 @@ a { color: var(--accent); }
 .header {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 32px;
   border-bottom: 1px solid var(--rule);
@@ -50,9 +50,13 @@ a { color: var(--accent); }
   background: linear-gradient(135deg, var(--accent), var(--accent-2)); opacity: .15;
   pointer-events: none;
 }
-  .id h1 { margin: 0; color: var(--ink); font-size: 32px; font-weight: 800; font-family: "Poppins", sans-serif; }
+  .id { text-align: center; }
+  .id h1 { margin: 0; color: var(--ink); font-size: 32px; font-weight: 800; font-family: "Poppins", sans-serif; position: relative; display: inline-block; padding-bottom: 8px; }
+  .id h1::after { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 60%; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: 2px; }
   .id .role { color: var(--accent); font-weight: 600; margin-top: 4px; font-family: "Poppins", sans-serif; }
-  .quick-links { margin-top: 12px; display: flex; gap: 12px; }
+  .id .role-secondary { color: var(--accent-2); font-weight: 600; margin-top: 2px; font-family: "Poppins", sans-serif; }
+  .id .tagline { margin-top: 12px; font-size: 15px; font-weight: 500; color: var(--muted); }
+  .quick-links { margin-top: 12px; display: flex; gap: 12px; justify-content: center; }
 .quick-links a { color: var(--accent); font-size: 20px; transition: color .2s; text-decoration: none; }
 .quick-links a:hover { color: var(--accent-2); }
 .skill-bars {
