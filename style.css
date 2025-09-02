@@ -236,11 +236,3 @@ a { color: var(--accent); }
 .sidebar{ display:flex; flex-direction:column; }
 .projects{ margin-top:auto; }
 .footer { padding: 16px 32px; color: #94a3b8; font-size: 12px; text-align: center; }
-body.ats { --accent: #000; --accent-2: #000; --accent-3: #000; --bg: #fff; --card: #fff; --rule: #000; color: #000; font-family: system-ui, sans-serif; }
-body.ats .card { box-shadow: none; }
-body.ats .header::before, body.ats .icon { display: none; }
-body.ats .skills { display: block; }
-body.ats .skills li { background: none; border: none; box-shadow: none; padding: 2px 0; border-radius: 0; display: list-item; transform: none; }
-body.ats .contact-list a, body.ats .link-list a { color: #000; border-color: #000; }
-body.ats .exp { border-color: #000; }
-body.ats .exp-item::before { background: #fff; border:2px solid #000; }
