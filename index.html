@@ -20,6 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="print.css">
   <script type="application/ld+json" defer>
   {
     "@context": "https://schema.org",
@@ -245,13 +246,15 @@
     document.getElementById('ats').addEventListener('click',function(){document.body.classList.toggle('ats');});
     document.getElementById('download').addEventListener('click',function(){
       const cv=document.querySelector('.card');
+      document.body.classList.add('print');
       html2pdf().set({
         margin:0,
         filename:'Shafaat_Ali_CV.pdf',
         image:{type:'jpeg',quality:0.98},
         html2canvas:{scale:2,useCORS:true},
-        jsPDF:{unit:'in',format:'a4',orientation:'portrait'}
-      }).from(cv).save();
+        jsPDF:{unit:'in',format:'a4',orientation:'portrait'},
+        pagebreak:{mode:['avoid-all','css','legacy']}
+      }).from(cv).save().then(()=>document.body.classList.remove('print'));
     });
   </script>
 </body>
