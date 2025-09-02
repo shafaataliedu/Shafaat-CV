@@ -42,7 +42,6 @@
   <a href="#main" class="skip-link">Skip to content</a>
   <div class="toolbar" role="navigation">
     <button class="download" id="download" aria-label="Download PDF">Download PDF</button>
-    <button class="download" id="download-summary" aria-label="Download one-page summary PDF">Download 1-Page PDF</button>
     <button class="download" id="open-summary" aria-label="Open one-page summary">One-Page CV</button>
     <button id="ats" aria-label="Toggle applicant tracking system friendly mode">ATS Mode</button>
   </div>
@@ -239,55 +238,6 @@
       </footer>
     </div>
   </div>
-  <div class="wrap" id="summary" hidden>
-    <div id="summary-card" class="card">
-      <header class="header" role="banner">
-        <div class="id">
-          <h1>Shafaat Ali</h1>
-          <div class="role">Sales Coordinator</div>
-          <div class="role-secondary">Digital Marketing &amp; Sales Support</div>
-          <p class="tagline">Helping businesses grow through sales coordination, CRM tools, and digital marketing.</p>
-          <ul class="contact-list">
-            <li><i class="fa-solid fa-map-marker-alt icons"></i>Peshawar, Pakistan</li>
-            <li><i class="fab fa-whatsapp icons"></i>+92 346 9089446</li>
-            <li><i class="fa-solid fa-envelope icons"></i>shafaataliedu@gmail.com</li>
-          </ul>
-        </div>
-      </header>
-      <div class="layout">
-        <main>
-          <section class="section summary">
-            <h2><i class="icon icons fa-solid fa-user"></i>Professional Summary</h2>
-            <div class="summary-text">
-              <p>Detail‑oriented Sales Coordinator with experience in sales support, online marketing and client communication.</p>
-            </div>
-          </section>
-          <section class="section">
-            <h2><i class="icon icons fa-solid fa-briefcase"></i>Experience</h2>
-            <ul class="skills">
-              <li>Founder &amp; Sales/Marketing Manager — Shafaat Ali Education (2024–Present)</li>
-              <li>Freelance Sales &amp; Digital Marketing Specialist (2019–Present)</li>
-              <li>Content Writer &amp; Virtual Assistant — Blueprint Digital (Feb 2022 – Sep 2022)</li>
-            </ul>
-          </section>
-          <section class="section">
-            <h2><i class="icon icons fa-solid fa-graduation-cap"></i>Education</h2>
-            <ul class="skills">
-              <li>Studies toward BSc Software Engineering — UET Mardan (2017–2021)</li>
-            </ul>
-          </section>
-          <section class="section">
-            <h2><i class="icon icons fa-solid fa-wrench"></i>Core Skills</h2>
-            <ul class="skills">
-              <li>Sales coordination &amp; CRM tools</li>
-              <li>Digital marketing &amp; content creation</li>
-              <li>Client communication &amp; reporting</li>
-            </ul>
-          </section>
-        </main>
-      </div>
-    </div>
-  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
   <script>
     window.addEventListener('DOMContentLoaded',function(){
@@ -303,23 +253,6 @@
           jsPDF:{unit:'in',format:'a4',orientation:'portrait'},
           pagebreak:{mode:['avoid-all','css','legacy']}
         }).from(cv).save();
-      });
-      document.getElementById('download-summary').addEventListener('click',function(){
-        const full=document.getElementById('full');
-        const summaryWrap=document.getElementById('summary');
-        const summary=document.getElementById('summary-card');
-        full.hidden=true;
-        summaryWrap.hidden=false;
-        setTimeout(function(){
-          html2pdf().set({
-            margin:0,
-            filename:'Shafaat_Ali_CV_One_Page.pdf',
-            image:{type:'jpeg',quality:0.98},
-            html2canvas:{scale:2,useCORS:true},
-            jsPDF:{unit:'in',format:'a4',orientation:'portrait'},
-            pagebreak:{mode:['avoid-all','css','legacy']}
-          }).from(summary).save().then(()=>{summaryWrap.hidden=true;full.hidden=false;});
-        },100);
       });
       document.getElementById('open-summary').addEventListener('click',function(){
         window.location.href='summary.html';
